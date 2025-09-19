@@ -2,100 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Farming Platform Design System - All colors, gradients, fonts, animations */
+/* Farming Dashboard Design System - Clean, minimal with earth tones */
 
 @layer base {
   :root {
-    /* Agricultural Color Palette */
-    --primary: 120 60% 35%;  /* Professional farm green */
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 120 50% 45%;
-    --primary-dark: 120 70% 25%;
-    
-    /* Earth tones and natural colors */
-    --secondary: 45 20% 85%;  /* Warm beige */
-    --secondary-foreground: 120 10% 15%;
-    --accent: 200 80% 50%;  /* Sky blue for contrast */
-    --accent-foreground: 0 0% 100%;
-    
-    /* Agricultural status colors */
-    --success: 120 100% 25%;  /* Deep green for healthy crops */
-    --warning: 45 100% 50%;   /* Golden yellow for attention */
-    --destructive: 0 75% 55%; /* Muted red for issues */
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Neutral foundation */
-    --background: 0 0% 100%;
-    --foreground: 120 5% 15%;
+    /* Base colors - Clean whites and soft backgrounds */
+    --background: 0 0% 99%;
+    --foreground: 215 25% 15%;
+
+    /* Card system - Subtle elevation */
     --card: 0 0% 100%;
-    --card-foreground: 120 5% 15%;
-    --popover: 0 0% 98%;
-    --popover-foreground: 120 5% 15%;
-    
-    /* Interactive elements */
-    --muted: 120 10% 95%;
-    --muted-foreground: 120 5% 45%;
-    --border: 120 15% 90%;
-    --input: 120 15% 90%;
-    --ring: 120 60% 35%;
-    
-    /* Role-based colors */
-    --super-admin: 300 60% 45%;    /* Purple for super admin */
-    --manager: 220 70% 50%;        /* Blue for managers */
-    --agronomist: 120 60% 35%;     /* Green for agronomists */
-    --support: 180 60% 45%;        /* Teal for support */
-    --business: 45 80% 50%;        /* Gold for business */
-    --analytics: 260 60% 50%;      /* Violet for analytics */
-    
-    /* Sidebar variables */
-    --sidebar-background: 120 10% 97%;
-    --sidebar-foreground: 120 10% 15%;
-    --sidebar-primary: 120 60% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 120 20% 92%;
-    --sidebar-accent-foreground: 120 10% 15%;
-    --sidebar-border: 120 15% 88%;
-    --sidebar-ring: 120 60% 35%;
-    
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary - Deep forest green for farming theme */
+    --primary: 145 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 145 85% 30%;
+
+    /* Secondary - Warm earth tone */
+    --secondary: 45 15% 95%;
+    --secondary-foreground: 215 25% 15%;
+
+    /* Muted tones - Subtle grays */
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Fresh green for highlights */
+    --accent: 120 60% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Status colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 90% 55%;
+    --warning-foreground: 215 25% 15%;
+
+    /* UI elements */
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 145 85% 25%;
+
+    /* Border radius for modern feel */
     --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --sidebar-width: 16rem;
+    --sidebar-collapsed-width: 4rem;
+    --header-height: 4rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 15%;
+    --sidebar-primary: 145 85% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 15% 96%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 215 15% 88%;
+    --sidebar-ring: 145 85% 25%;
   }
 
   .dark {
-    /* Dark mode agricultural theme */
-    --primary: 120 50% 55%;
-    --primary-foreground: 120 10% 5%;
-    
-    --secondary: 45 15% 20%;
-    --secondary-foreground: 45 20% 85%;
-    --accent: 200 60% 45%;
-    --accent-foreground: 0 0% 100%;
-    
-    --success: 120 80% 40%;
-    --warning: 45 90% 60%;
-    --destructive: 0 65% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --background: 120 8% 8%;
-    --foreground: 120 10% 95%;
-    --card: 120 8% 10%;
-    --card-foreground: 120 10% 95%;
-    --popover: 120 8% 12%;
-    --popover-foreground: 120 10% 95%;
-    
-    --muted: 120 8% 15%;
-    --muted-foreground: 120 5% 65%;
-    --border: 120 8% 18%;
-    --input: 120 8% 18%;
-    --ring: 120 50% 55%;
-    
-    --sidebar-background: 120 10% 6%;
-    --sidebar-foreground: 120 10% 90%;
-    --sidebar-primary: 120 50% 55%;
-    --sidebar-primary-foreground: 120 10% 5%;
-    --sidebar-accent: 120 8% 12%;
-    --sidebar-accent-foreground: 120 10% 90%;
-    --sidebar-border: 120 8% 15%;
-    --sidebar-ring: 120 50% 55%;
+    --background: 215 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 145 65% 45%;
+    --primary-foreground: 215 25% 8%;
+    --primary-hover: 145 65% 50%;
+
+    --secondary: 215 15% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 215 15% 15%;
+    --muted-foreground: 215 10% 60%;
+
+    --accent: 120 50% 45%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 215 15% 20%;
+    --input: 215 15% 20%;
+    --ring: 145 65% 45%;
+
+    --sidebar-background: 215 25% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 145 65% 45%;
+    --sidebar-primary-foreground: 215 25% 8%;
+    --sidebar-accent: 215 15% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 215 15% 18%;
+    --sidebar-ring: 145 65% 45%;
   }
 }
 
@@ -105,59 +113,27 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
   }
+}
 
-  /* Agricultural component styles */
-  .agricultural-gradient {
-    background: linear-gradient(135deg, hsl(120 60% 35%), hsl(120 50% 45%));
-  }
-  
-  .earth-gradient {
-    background: linear-gradient(135deg, hsl(45 30% 80%), hsl(120 20% 85%));
-  }
-  
-  .harvest-gradient {
-    background: linear-gradient(135deg, hsl(45 80% 60%), hsl(120 60% 40%));
-  }
-  
-  .role-badge-super-admin {
-    background: hsl(var(--super-admin));
-    color: hsl(0 0% 100%);
-  }
-  
-  .role-badge-manager {
-    background: hsl(var(--manager));
-    color: hsl(0 0% 100%);
-  }
-  
-  .role-badge-agronomist {
-    background: hsl(var(--agronomist));
-    color: hsl(0 0% 100%);
-  }
-  
-  .role-badge-support {
-    background: hsl(var(--support));
-    color: hsl(0 0% 100%);
-  }
-  
-  .role-badge-business {
-    background: hsl(var(--business));
-    color: hsl(0 0% 100%);
-  }
-  
-  .role-badge-analytics {
-    background: hsl(var(--analytics));
-    color: hsl(0 0% 100%);
-  }
-
-  /* Smooth transitions for all interactive elements */
-  .transition-smooth {
+@layer components {
+  /* Smooth animations for sidebar */
+  .sidebar-transition {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px hsl(120 10% 0% / 0.15);
+
+  /* Hover effects */
+  .nav-item {
+    @apply relative flex items-center gap-3 rounded-lg px-3 py-2 transition-colors hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  /* Card hover effects */
+  .dashboard-card {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
   }
 }
